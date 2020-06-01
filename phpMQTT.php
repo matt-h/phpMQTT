@@ -492,7 +492,7 @@ class phpMQTT
                 $topic
             )) {
                 if ($top['qos'] > 0) {
-                    $msg_id = (ord($msg{0}) << 8) + ord($msg{1});
+                    $msg_id = (ord($msg[0]) << 8) + ord($msg[1]);
                     $msg = substr($msg, 2, $tlen-2);
                 }
                 if ($top['function'] === '__direct_return_message__') {
